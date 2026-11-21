@@ -165,49 +165,49 @@
     {
         "title": "Código de Conducta",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/.github/CODE_OF_CONDUCT.md",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/.github/CODE_OF_CONDUCT.md",
         "description": "Código de conducta del proyecto y la comunidad.",
         "keywords": ["codigo", "conducta", "normas", "comunidad"]
     },
     {
         "title": "Licencia MIT",
         "type": "Legal",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/LICENSE",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/LICENSE",
         "description": "Información sobre la licencia de código abierto del proyecto.",
         "keywords": ["licencia", "mit", "open source", "codigo abierto"]
     },
     {
         "title": "Repositorio GitHub",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424",
+        "url": "https://github.com/ce-ipet424/CE-IPET424",
         "description": "Repositorio oficial del código fuente en GitHub.",
         "keywords": ["github", "repositorio", "codigo", "fuente", "git"]
     },
     {
         "title": "Novedades y Cambios (Changelog)",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/CHANGELOG.md",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/CHANGELOG.md",
         "description": "Historial de versiones, actualizaciones y cambios del sitio.",
         "keywords": ["CHANGELOG", "novedades", "cambios", "versiones", "historial"]
     },
     {
         "title": "Arquitectura del Sitio (Architecture)",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/docs/ARCHITECTURE.md",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/docs/ARCHITECTURE.md",
         "description": "Documentación técnica sobre la estructura, diseño y organización del proyecto.",
         "keywords": ["arquitectura", "architecture", "estructura", "diseño", "tecnico", "docs"]
     },
     {
         "title": "Guía de Contribución (Contributing)",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/docs/CONTRIBUTING.md",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/docs/CONTRIBUTING.md",
         "description": "Pautas, normas e instrucciones para colaborar en el desarrollo del portal.",
         "keywords": ["contribuir", "contributing", "colaborar", "desarrollo", "guia", "docs"]
     },
     {
         "title": "Hoja de Ruta (Roadmap)",
         "type": "Documentación",
-        "url": "https://github.com/JohnMartinRB/CE-IPET424/blob/main/docs/ROADMAP.md",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/docs/ROADMAP.md",
         "description": "Planificación a futuro, fases de desarrollo y próximas funciones del proyecto.",
         "keywords": ["roadmap", "hoja de ruta", "plan", "futuro", "versiones", "etapas", "docs"]
     }

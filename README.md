@@ -2,8 +2,8 @@
 
 > **Portal Institucional Digital, Gestión Escolar e Informática Estudiantil**
 
-[![Estado del Despliegue](https://github.com/JohnMartinRB/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/JohnMartinRB/CE-IPET424/actions/workflows/static.yml)
-![Versión](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/JohnMartinRB/CE-IPET424/main/data/version.json&query=$.label&label=versi%C3%B3n&color=blue)
+[![Estado del Despliegue](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml)
+![Versión](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/ce-ipet424/CE-IPET424/main/data/version.json&query=$.label&label=versi%C3%B3n&color=blue)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-green)
 ![Tecnologías](<https://img.shields.io/badge/stack-HTML5%20%7C%20CSS3%20%7C%20JS%20(ES6%2B)-orange>)
 
@@ -156,7 +156,7 @@ Proyecto diseñado, programado y mantenido por:
 - **Juan Martín Rodríguez**  
   _Presidente del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
     - **GitHub:** [@JohnMartinRB](https://github.com/JohnMartinRB)
-        - **Repositorio oficial:** [CE-IPET424](https://github.com/JohnMartinRB/CE-IPET424)
+        - **Repositorio oficial:** [CE-IPET424](https://github.com/ce-ipet424/CE-IPET424)
 - **Gabriel Campana**  
   _Secretario de RR. EE. del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
     - **GitHub:** [@campanag721-tech](https://github.com/campanag721-tech)
