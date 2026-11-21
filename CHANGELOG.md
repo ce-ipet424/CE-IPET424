@@ -26,6 +26,10 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 - Se actualizaron los enlaces a Github en el footer
 - Se redujo el contenido de `PULL_REQUEST_TEMPLATE-md`
 
+### v0.48.3-alpha (21/11/26)
+
+- Se agregó una Media Library en `admin/config.yml`, conectándose con la nueva cuenta de Cloudinary
+
 ---
 
 ## v0.47.0-alpha - Versión Principal
