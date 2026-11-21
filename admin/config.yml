@@ -11,7 +11,10 @@ publish_mode: editorial_workflow
 media_folder: assets/img/uploads
 public_folder: /assets/img/uploads
 media_library:
-    name: default
+    name: cloudinary
+    config:
+        cloud_name: ywp9lepl
+        api_key: 614246179125494
 
 collections:
     - name: contenido
