@@ -2,8 +2,8 @@
 
 > **Portal Institucional Digital, Gestión Escolar e Informática Estudiantil**
 
-[![Estado del Despliegue](https://github.com/JohnMartinRB/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/JohnMartinRB/CE-IPET424/actions/workflows/static.yml)
-![Versión](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/JohnMartinRB/CE-IPET424/main/data/version.json&query=$.label&label=versi%C3%B3n&color=blue)
+[![Estado del Despliegue](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml)
+![Versión](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/ce-ipet424/CE-IPET424/main/data/version.json&query=$.label&label=versi%C3%B3n&color=blue)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-green)
 ![Tecnologías](<https://img.shields.io/badge/stack-HTML5%20%7C%20CSS3%20%7C%20JS%20(ES6%2B)-orange>)
 
@@ -38,7 +38,7 @@ Este proyecto busca resolver dicha problemática mediante una **plataforma acces
 
 | Parámetro                      | Detalle                            |
 | :----------------------------- | :--------------------------------- |
-| **Versión Actual**             | `0.47` (Fase Alpha, en desarrollo) |
+| **Versión Actual**             | `0.48` (Fase Alpha, en desarrollo) |
 | **Inicio de Desarrollo**       | Viernes 7 de agosto de 2026        |
 | **Lanzamiento Estable (v1.0)** | Martes 16 de marzo de 2027         |
 | **Entorno de Hosting**         | Cloudflare Pages / GitHub Pages    |
@@ -102,7 +102,11 @@ El código está estructurado de forma modular y limpia. Para consultar el árbo
 
 ## 📜 Últimos Cambios y Actualizaciones
 
-- **`v0.47-alpha` (Actual)**
+- **`v0.48-alpha` (Actual)**
+    - Ahora 404.html no tiene header ni footer
+    - Encima del título de 404 Err
+
+- **`v0.47-alpha` (Anterior)**
     - Ahora 404.html no tiene header ni footer
     - Encima del título de 404 Error, ahora hay una nueva ilustración de la mascota
         - Esta es la primera vez que aparece la mascota oficialmente en el sitio web
@@ -116,22 +120,7 @@ El código está estructurado de forma modular y limpia. Para consultar el árbo
     - Se reworkeó la función para subir los asides al llegar al footer
     - Se actualizó humans y el árbol de carpetas
 
-- **`v0.46-alpha` (Anterior)**
-    - Se reworkeó la función de los atajos de teclado
-    - Se cambiaron todos los atajos de teclado y se eliminaron otros
-        - Eliminados: modo código, escala de grises, alto contraste, desactivar sonido y animaciones
-        - Mantenidos: modo oscuro, modo descanso, copiar link, abrir asides (todos modificados)
-        - Nuevos: abrir panel de configuración, temas, búsqueda, accesibilidad y compartir
-    - Nueva sección en `nosotros.html` con los integrantes del C.E. (nombre, curso y cargo)
-    - Archivos `members.css` para las tarjetas, `members.js` y `members.json` para guardar y mostrar los nombres
-    - El título de pestaña de 404.html ahora no incluye el sufijo de Centro[...]
-    - El título de 404.html ahora es 404 Error
-    - Carpeta `assets/img/gallery/members` con imágenes placeholder de los miembros del C.E.
-    - Carpetas vacías futuras `assets/img/gallery/school` y `/icons/buttons`
-    - Se corrigió el nombre de los mapas svg
-    - ID de `button-theme` ahora es `button-dark` en todas las funciones
-
-Consultá el [Historial Completo de Cambios (CHANGELOG.md)](./docs/CHANGELOG.md) para ver la bitácora detallada de todas las versiones y parches.
+Consultá el [Historial Completo de Cambios (CHANGELOG.md)](./CHANGELOG.md) para ver la bitácora detallada de todas las versiones y parches.
 
 ---
 
@@ -139,7 +128,7 @@ Consultá el [Historial Completo de Cambios (CHANGELOG.md)](./docs/CHANGELOG.md)
 
 ### 🚀 Próximas Versiones
 
-Para conocer las funcionalidades en las que está trabajando el equipo, te invitamos a conocer nuestra [Hoja de Ruta de Desarrollo](./ROADMAP.md).
+Para conocer las funcionalidades en las que está trabajando el equipo, te invitamos a conocer nuestra [Hoja de Ruta de Desarrollo](./docs/ROADMAP.md).
 
 ---
 
@@ -156,7 +145,7 @@ Proyecto diseñado, programado y mantenido por:
 - **Juan Martín Rodríguez**  
   _Presidente del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
     - **GitHub:** [@JohnMartinRB](https://github.com/JohnMartinRB)
-        - **Repositorio oficial:** [CE-IPET424](https://github.com/JohnMartinRB/CE-IPET424)
+        - **Repositorio oficial:** [CE-IPET424](https://github.com/ce-ipet424/CE-IPET424)
 - **Gabriel Campana**  
   _Secretario de RR. EE. del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
     - **GitHub:** [@campanag721-tech](https://github.com/campanag721-tech)

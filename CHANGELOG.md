@@ -4,6 +4,19 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 
 ---
 
+## v0.48.0-alpha - Versión Principal
+
+- Nuevo panel de Administración del sitio (en proceso todavía)
+- Se accede desde un nuevo botón en el header
+- Nuevo botón de Info en el header (sin función aún)
+- Nuevos archivos en `admin` para controlar la administración de archivos json del sitio
+- Nuevo formato en algunos archivos json
+- Se movió el repositorio a una organización a nombre del C.E. IPET 424
+- Se actualizaron los enlaces del README y `search-index.json` a la nueva ubicación del respositorio
+- Se arregló un enlace del README
+
+---
+
 ## v0.47.0-alpha - Versión Principal
 
 - Se personalizó la meta tag de Description para todas las subpáginas
