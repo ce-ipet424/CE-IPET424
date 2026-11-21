@@ -4,7 +4,7 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 
 ---
 
-## v0.48.0-alpha - Versión Principal
+## v0.48.0-alpha - Versión Principal (21/11/26)
 
 - Nuevo panel de Administración del sitio (en proceso todavía)
 - Se accede desde un nuevo botón en el header
@@ -14,6 +14,10 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 - Se movió el repositorio a una organización a nombre del C.E. IPET 424
 - Se actualizaron los enlaces del README y `search-index.json` a la nueva ubicación del respositorio
 - Se arregló un enlace del README
+
+### v0.48.1-alpha (21/11/26)
+
+- Versión de DecapCMS corregida
 
 ---
 
@@ -28,7 +32,7 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 - Se reworkeó la función para subir los asides al llegar al footer
 - Se actualizó humans y el árbol de carpetas
 
-### v0.47.1-alpha
+### v0.47.1-alpha (21/11/26)
 
 - Ahora 404.html no tiene header ni footer
 - Encima del título de 404 Error, ahora hay una nueva ilustración de la mascota
