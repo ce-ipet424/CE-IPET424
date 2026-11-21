@@ -19,6 +19,13 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 
 - Versión de DecapCMS corregida
 
+### v0.48.2-alpha (21/11/26)
+
+- Correción: se agregaron más campos a `admin/config.yml`
+- Se agregó meta-description, favicon y se cambió el título de pestaña a `admin.html`
+- Se actualizaron los enlaces a Github en el footer
+- Se redujo el contenido de `PULL_REQUEST_TEMPLATE-md`
+
 ---
 
 ## v0.47.0-alpha - Versión Principal

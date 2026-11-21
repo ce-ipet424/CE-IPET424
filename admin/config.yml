@@ -8,6 +8,10 @@ backend:
     auth_endpoint: api/auth
 
 publish_mode: editorial_workflow
+media_folder: assets/img/uploads
+public_folder: /assets/img/uploads
+media_library:
+    name: default
 
 collections:
     - name: contenido
