@@ -20,9 +20,6 @@
     box-shadow: var(--shadow-base);
     transition: var(--transition-fade);
 }
-/*.header-card.scrolled {
-    box-shadow: var(--shadow-section-card-hover);
-}*/
 .header-logo-container {
     display: flex;
     flex-direction: column;
@@ -162,7 +159,7 @@
     .header-icons-grid {
         display: grid !important;
         grid-template-rows: repeat(2, 2.2rem); /* 2 filas fijas */
-        grid-template-columns: auto 2.2rem 2.2rem; /* 3 columnas fijas */
+        grid-template-columns: auto 2.2rem 2.2rem 2.2rem; /* 3 columnas fijas */
         align-items: center;
         justify-content: start;
     }
