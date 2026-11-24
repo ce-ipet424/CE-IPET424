@@ -2,6 +2,6 @@
 Contact: mailto:ceipet424@gmail.com
 Expires: 2027-12-31T23:59:59.000Z
 Preferred-Languages: es
-Canonical: https://johnmartinrb.github.io/CE-IPET424/.well-known/security.txt
+Canonical: https://ce-ipet424.github.io/CE-IPET424/.well-known/security.txt
 Policy: Si encontrás una falla de seguridad en el sitio, por favor reportala a nuestro mail antes de hacerla pública. ¡Gracias por colaborar con la escuela!
-Hiring: https://johnmartinrb.github.io/CE-IPET424/about.html
+Hiring: https://ce-ipet424.github.io/CE-IPET424/nosotros.html

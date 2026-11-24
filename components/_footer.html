@@ -7,14 +7,6 @@
                 <div id="pdf-reader-options">
                     <button
                         type="button"
-                        id="pdf-button-expand"
-                        class="button button-pdf button-small"
-                        aria-label="Expandir visor"
-                    >
-                        ⤢ Expandir
-                    </button>
-                    <button
-                        type="button"
                         id="pdf-button-rest"
                         class="button button-pdf button-small"
                         data-set-theme="rest"
@@ -29,6 +21,14 @@
                         aria-label="Copiar enlace del PDF"
                     >
                         Copiar enlace
+                    </button>
+                    <button
+                        type="button"
+                        id="pdf-button-expand"
+                        class="button button-pdf button-small"
+                        aria-label="Expandir visor"
+                    >
+                        ⤢ Expandir
                     </button>
                     <button
                         type="button"
@@ -314,21 +314,8 @@
     <div id="toast-copied-link" class="toast toast-copied-link">¡Enlace copiado al portapapeles!</div>
     <div id="toast-update" class="toast toast-update">
         <span class="toast-update-text">¡Nueva versión disponible!</span>
-        <button
-            id="button-reload-page"
-            class="button button-small"
-            style="margin-left: var(--space-xs); padding: 0.3rem 0.6rem"
-        >
-            Reiniciar
-        </button>
-        <button
-            id="button-close-update"
-            class="toast-close-button"
-            aria-label="Cerrar notificación"
-            style="background: none; border: none; margin-left: var(--space-xs); cursor: var(--pointer)"
-        >
-            ✕
-        </button>
+        <button id="button-reload-page" class="button button-small button-reload-page">Reiniciar</button>
+        <button id="button-close-update" class="toast-close-button" aria-label="Cerrar notificación">✕</button>
     </div>
     <p id="footer-copyright" class="text footer-copyright">
         &copy; <span id="footer-copyright-year">2026</span> Centro de Estudiantes IPET N° 424 Villa Dolores. Todos los

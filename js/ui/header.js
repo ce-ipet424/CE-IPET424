@@ -15,6 +15,7 @@ export function initHeader() {
         "header-button-search": { title: "Buscador del Sitio", contentId: "content-search" },
         "header-button-themes": { title: "Temas y Colores", contentId: "content-themes" },
         "header-button-accessibility": { title: "Accesibilidad", contentId: "content-accessibility" },
+        "header-button-info": { title: "Información", contentId: "content-info" },
         "header-button-settings": { title: "Opciones de Interfaz", contentId: "content-settings" },
         "header-button-share": { title: "Compartir Sitio", contentId: "content-share" },
     };

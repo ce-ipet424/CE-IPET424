@@ -1,153 +1,169 @@
-# 🏫 Sitio Web del Centro de Estudiantes - IPET N° 424
+# Centro de Estudiantes IPET N° 424: sitio web
 
-> **Portal Institucional Digital, Gestión Escolar e Informática Estudiantil**
-
-[![Estado del Despliegue](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml)
+[![Estado del despliegue](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml/badge.svg)](https://github.com/ce-ipet424/CE-IPET424/actions/workflows/static.yml)
 ![Versión](https://img.shields.io/badge/dynamic/json?url=https://raw.githubusercontent.com/ce-ipet424/CE-IPET424/main/data/version.json&query=$.label&label=versi%C3%B3n&color=blue)
 ![Licencia](https://img.shields.io/badge/licencia-MIT-green)
-![Tecnologías](<https://img.shields.io/badge/stack-HTML5%20%7C%20CSS3%20%7C%20JS%20(ES6%2B)-orange>)
 
-Portal web institucional desarrollado para concentrar, digitalizar y facilitar el acceso a la información académica, solicitudes, formularios, trámites y herramientas interactivas para la comunidad educativa del **IPET N° 424**.
+Sitio web oficial del Centro de Estudiantes del IPET N° 424, de Villa Dolores (Córdoba). Reúne en un solo lugar la información del colegio y del Centro: trámites, formularios, horarios, calendario, integrantes y recursos para estudiantes.
 
----
+Está hecho con HTML, CSS y JavaScript, sin frameworks ni proceso de compilación. El sitio se publica desde la rama `main`.
 
-## 📌 Índice de Contenidos
+## Índice
 
-- [Vista General y Propósito](#-vista-general-y-propósito)
-- [Estado del Proyecto](#-estado-del-proyecto)
-- [Funcionalidades Principales](#-funcionalidades-principales)
-- [Tecnologías e Infraestructura](#-tecnologías-e-infraestructura)
-- [Automatización e Integración Continua (CI/CD)](#-automatización-y-integración-continua-cicd)
-- [Arquitectura y Estructura del Proyecto](#-arquitectura-y-estructura-del-proyecto)
-- [Historial de Versiones (Changelog)](#-últimos-cambios-y-actualizaciones)
-- [Roadmap de Desarrollo](#-roadmap-de-desarrollo)
-- [¿Querés colaborar?](#-querés-colaborar)
-- [Contacto y Autoría](#-contacto-y-autoría)
+- [Estado del proyecto](#estado-del-proyecto)
+- [Qué hay en el sitio](#qué-hay-en-el-sitio)
+- [Funciones destacadas](#funciones-destacadas)
+- [Panel de administración](#panel-de-administración)
+- [Tecnologías y servicios externos](#tecnologías-y-servicios-externos)
+- [Instalación local](#instalación-local)
+- [Despliegue](#despliegue)
+- [Estructura del proyecto](#estructura-del-proyecto)
+- [Versiones y cambios](#versiones-y-cambios)
+- [Pendientes conocidos](#pendientes-conocidos)
+- [Datos personales](#datos-personales)
+- [Seguridad](#seguridad)
+- [Contribuir](#contribuir)
+- [Créditos y licencia](#créditos-y-licencia)
 
----
+## Estado del proyecto
 
-## 🎯 Vista General y Propósito
+| Dato                        | Detalle                         |
+| :-------------------------- | :------------------------------ |
+| Versión actual              | 0.49-alpha (24/11/2026)         |
+| Inicio del desarrollo       | 7 de agosto de 2026             |
+| Lanzamiento previsto (v1.0) | 9 de marzo de 2027              |
+| Fase                        | Alpha                           |
+| Publicación                 | GitHub Pages y Cloudflare Pages |
+| Licencia                    | MIT                             |
 
-El portal del Centro de Estudiantes nace con la necesidad de **centralizar y modernizar los canales de comunicación estudiantiles**. Tradicionalmente, la información sobre trámites, horarios, planes de estudio y solicitudes escolares se encontraba dispersa.
+La fase alpha significa que el sitio ya funciona, pero algunas secciones todavía están vacías o incompletas, y la estructura puede cambiar de una versión a otra. El plan de cada versión está en [docs/ROADMAP.md](./docs/ROADMAP.md).
 
-Este proyecto busca resolver dicha problemática mediante una **plataforma accesible, liviana, responsiva y orientada a la experiencia de usuario (UX/UI)**, optimizada para funcionar correctamente en dispositivos móviles y de escritorio.
+## Qué hay en el sitio
 
----
+| Página              | Contenido                                                                                          |
+| :------------------ | :------------------------------------------------------------------------------------------------- |
+| `index.html`        | Portal principal, con accesos a trámites, reglamento, herramientas y el Centro                     |
+| `nosotros.html`     | Quiénes somos, comisión directiva e integrantes, cargados desde `data/members.json`                |
+| `horarios.html`     | Horarios por año y curso, con colores, tipografía, visibilidad de docentes y descarga en PNG o PDF |
+| `calendario.html`   | Generador de calendario anual personalizable, con descarga                                         |
+| `tramites.html`     | Trámites, formularios y documentos escolares                                                       |
+| `recursos.html`     | Descargas, símbolos patrios, mapas, teléfonos de emergencia y guías rápidas                        |
+| `contacto.html`     | Formulario de consultas (Google Forms), canales oficiales y ubicación                              |
+| `escuela.html`      | Información institucional del IPET N° 424 y sus especialidades                                     |
+| `herramientas.html` | Herramientas y utilidades para estudiantes                                                         |
+| `proyectos.html`    | Proyectos, talleres, torneos y acción social del Centro                                            |
+| `noticias.html`     | Sección de noticias preparada, todavía sin contenido                                               |
+| `terminos.html`     | Términos, condiciones y políticas de privacidad                                                    |
+| `creditos.html`     | Créditos del proyecto y del equipo de desarrollo                                                   |
+| `404.html`          | Página de error                                                                                    |
 
-## 🚀 Estado del Proyecto
+La mayoría de las páginas comparten el mismo encabezado y pie de página. Además tienen dos paneles laterales: uno de configuración (temas, accesibilidad y opciones) y otro de widgets (próximo feriado, efeméride del día, frase, datos curiosos, clima y hora, y vistas del sitio). Los paneles no aparecen en `terminos.html` ni en la página 404, que tiene diseño propio.
 
-| Parámetro                      | Detalle                            |
-| :----------------------------- | :--------------------------------- |
-| **Versión Actual**             | `0.48` (Fase Alpha, en desarrollo) |
-| **Inicio de Desarrollo**       | Viernes 7 de agosto de 2026        |
-| **Lanzamiento Estable (v1.0)** | Martes 16 de marzo de 2027         |
-| **Entorno de Hosting**         | Cloudflare Pages / GitHub Pages    |
-| **Mantenimiento**              | Activo (CI/CD Automático)          |
+## Funciones destacadas
 
----
+**Accesibilidad.** El tamaño del texto se ajusta en 10 niveles, de 85 % a 130 %. También hay una fuente pensada para dislexia (Atkinson Hyperlegible), modo de alto contraste, escala de grises y un modo descanso. La reducción de animaciones puede activarse a mano, y el sitio la respeta si el sistema operativo la tiene activada.
 
-## ✨ Funcionalidades Principales
+**Temas y temporadas.** El sitio detecta si el sistema está en modo oscuro y lo aplica por defecto. Además hay un modo código y temas de temporada: verano, mes rosa, misterio y festividades. Cada temporada cambia también los logos.
 
-### 🔍 1. Módulo de Horarios Escolar Interactivo (futuro)
+**Horarios y calendario.** Las dos páginas generan una versión personalizada que se puede descargar. La descarga de horarios usa html2canvas y jsPDF, y está en `js/modules/schedules.js`.
 
-- **Buscador/Filtro Dinámico:** Consulta personalizada por curso, división, turno o materia.
-- **Visualización Limpia:** Tablas de horarios adaptables con resaltado visual.
+**Buscador.** Se abre desde el encabezado o con `Alt + B`. Busca en `data/search-index.json` por título, descripción, tipo y palabras clave, sin recargar la página.
 
-### 🌓 2. Sistema de Interfaz Adaptativa (Dark / Light Mode)
+**Visor de PDF.** Los documentos de trámites y recursos se abren en una ventana modal, sin salir de la página.
 
-- **Modo Oscuro Integrado:** Detección de preferencia del sistema operativo y alternancia dinámica vía JS.
-- **Persistencia de Selección:** Guardado de preferencias mediante `localStorage`.
+**Novedades por versión.** Al cambiar de versión, el sitio muestra un aviso con los cambios leídos de `CHANGELOG.md`.
 
-### 📂 3. Centro de Documentación y Descargas
+**Atajos de teclado.** Todos usan `Alt` más una letra.
 
-- Acceso directo a formularios institucionales, solicitudes de pase, certificados e instructivos en formato PDF.
-- Enlaces organizados por categorías de trámite.
+**Sonidos.** Hay efectos de sonido para la interfaz, con un interruptor que se guarda en el navegador.
 
-### ✉️ 4. Formulario Institucional y Canal de Sugerencias
+Además hay algunos easter eggs escondidos en el sitio. No se documentan acá.
 
-- Sistema de contacto directo con la comisión directiva del Centro de Estudiantes.
-- Validación de campos en tiempo real mediante JavaScript.
+## Panel de administración
 
-### ❓ 5. Sección FAQ y Mapa Interactivo (futuro)
+El contenido de `data/` se puede editar desde el navegador en `/admin`, con Decap CMS. Para entrar hace falta una cuenta de GitHub con permiso sobre el repositorio. El inicio de sesión pasa por las funciones de `functions/api/`, que corren en Cloudflare Pages.
 
-- Preguntas frecuentes sobre matriculación, régimen de asistencia y convivencia escolar.
-- Ubicación y mapa del establecimiento educativo.
+El panel usa flujo editorial: los cambios quedan como borradores hasta que se publican.
 
----
+Las imágenes se suben a través de Cloudinary, configurado como Media Library en `admin/config.yml`.
 
-## 🛠️ Tecnologías e Infraestructura
+## Tecnologías y servicios externos
 
-- **Frontend Nativo:** `HTML5` semántico, `CSS3` (utilizando variables nativas CSS y Flexbox/Grid) y `JavaScript (ES6+)` sin dependencias pesadas de terceros para garantizar una carga ultrarrápida.
-- **Alojamiento y Servidores:** Infraestructura distribuida en **Cloudflare Pages** y servidor estático en **GitHub Pages**.
-- **Control de Versiones:** Git & GitHub Workflow.
+El sitio usa HTML5 semántico, CSS3 con variables y módulos por carpeta, y JavaScript ES6+ con módulos nativos del navegador. No hay dependencias instaladas con npm ni paso de compilación.
 
----
+Las librerías html2canvas y jsPDF están incluidas en `assets/libs/`. Las tipografías están en `assets/fonts/` en formato .woff2, así que el sitio no depende de Google Fonts.
 
-## ⚙️ Automatización y Integración Continua (CI/CD)
+Algunos servicios externos forman parte del funcionamiento:
 
-El proyecto cuenta con integración continua configurada mediante **GitHub Actions** (`static.yml`).
+| Servicio         | Para qué                                                  | Dónde se configura                                                  |
+| :--------------- | :-------------------------------------------------------- | :------------------------------------------------------------------ |
+| Open-Meteo       | Temperatura actual de Villa Dolores en el widget de clima | `js/ui/buttons.js` (no requiere clave)                              |
+| Google Forms     | Formulario de consultas en `contacto.html`                | Dentro de `contacto.html`                                           |
+| Decap CMS 3.18.0 | Panel de edición de contenido, cargado desde unpkg        | `admin/index.html`                                                  |
+| GitHub (OAuth)   | Inicio de sesión del panel                                | Variables `GITHUB_CLIENT_ID` y `GITHUB_CLIENT_SECRET` en Cloudflare |
+| Cloudinary       | Biblioteca de imágenes del panel                          | `admin/config.yml`                                                  |
 
-Cada commit o pull request realizado sobre la rama principal (`main`) ejecuta un proceso automatizado que:
+## Instalación local
 
-1. Verifica la integridad de los archivos estáticos.
-2. Despliega automáticamente los últimos cambios al servidor de producción en cuestión de segundos.
+Se necesita Git y cualquier servidor de archivos estáticos. No conviene abrir `index.html` con doble clic: los módulos de JavaScript y las llamadas `fetch` no funcionan desde `file://`.
 
----
+```bash
+git clone https://github.com/ce-ipet424/CE-IPET424.git
+cd CE-IPET424
+python3 -m http.server 8000
+```
 
-## 📂 Arquitectura y Estructura del Proyecto
+Después se abre `http://localhost:8000` en el navegador. También sirve la extensión Live Server de VS Code.
 
-El código está estructurado de forma modular y limpia. Para consultar el árbol completo de archivos y módulos, revisá la [Guía de Arquitectura del Proyecto](./docs/ARCHITECTURE.md).
+El panel de administración y el inicio de sesión con GitHub no funcionan en local, porque dependen de las funciones de Cloudflare Pages.
 
----
+## Despliegue
 
-## 📜 Últimos Cambios y Actualizaciones
+El sitio se publica en dos lugares:
 
-- **`v0.48-alpha` (Actual)**
-    - Ahora 404.html no tiene header ni footer
-    - Encima del título de 404 Err
+- **GitHub Pages.** El workflow `.github/workflows/static.yml` se ejecuta con cada push a `main` y publica todo el repositorio. Hoy el workflow no tiene paso de validación: solo copia los archivos y los despliega.
+- **Cloudflare Pages.** La URL configurada en `admin/config.yml` es `https://ceipet424.pages.dev`. La configuración de este despliegue no está en el repositorio.
 
-- **`v0.47-alpha` (Anterior)**
-    - Ahora 404.html no tiene header ni footer
-    - Encima del título de 404 Error, ahora hay una nueva ilustración de la mascota
-        - Esta es la primera vez que aparece la mascota oficialmente en el sitio web
-    - El título de 404 Error ahora es más pequeño
-    - Se personalizó la meta tag de Description para todas las subpáginas
-    - Los archivos `schedules.css`, `calendar.css`, `controls.css` y `members.css` se movieron a `css/modules/` y se quitaron de la importación de `styles.css`
-    - Ahora se importan únicamente en las páginas donde se utilizan
-    - Los archivos `schedules.js`, `calendar.js` y `members.js` se movieron a `js/modules/` y se quitaron de la importación de `styles.css`
-    - Ahora se importan únicamente en las páginas donde se utilizan
-    - Se renombró `secret.css` a `extras.css`
-    - Se reworkeó la función para subir los asides al llegar al footer
-    - Se actualizó humans y el árbol de carpetas
+Como cada push a `main` llega a producción, conviene trabajar en ramas aparte y revisar los cambios antes de integrarlos.
 
-Consultá el [Historial Completo de Cambios (CHANGELOG.md)](./CHANGELOG.md) para ver la bitácora detallada de todas las versiones y parches.
+## Estructura del proyecto
 
----
+Las carpetas principales son `components/` (fragmentos HTML compartidos), `css/` (hojas de estilo organizadas por base, componentes, layout, misc y módulos), `js/` (módulos de interfaz, utilidades, subpáginas y easter eggs), `data/` (contenido en JSON), `assets/` (imágenes, fuentes, audio y documentos), `admin/` (panel de administración) y `functions/` (funciones de Cloudflare Pages).
 
-## 🗺️ Roadmap de Desarrollo
+El árbol completo, con la función de cada archivo, está en [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md).
 
-### 🚀 Próximas Versiones
+## Versiones y cambios
 
-Para conocer las funcionalidades en las que está trabajando el equipo, te invitamos a conocer nuestra [Hoja de Ruta de Desarrollo](./docs/ROADMAP.md).
+El número de versión sigue un esquema semántico adaptado a la fase alpha. Un cambio grande sube el número del medio (0.47.0 a 0.48.0) y un arreglo sube el último número (0.48.2 a 0.48.3). La versión vigente se lee desde `data/version.json`, y el historial completo está en [CHANGELOG.md](./CHANGELOG.md).
 
----
+La última versión, 0.49.0-alpha, reworkeó toda la documentación del proyecto, haciéndola más compleja y completa, y sumando documentación nueva. Se añadió un nuevo botón de navegación en el header, se movieron unos botones y se arreglaron muchos enlaces en la documentación.
 
-## 🤝 ¿Querés colaborar?
+## Pendientes conocidos
 
-Si sos parte del equipo o querés aportar al proyecto, leé nuestra [Guía de Contribución y Convenciones](./docs/CONTRIBUTING.md) antes de enviar tus commits.
+- `recursos.html` enlaza nueve archivos que no están en el repositorio: tres letras de himnos en `assets/docs/patria/`, tres audios en `assets/audio/music/`, y tres imágenes en `assets/img/resources/`.
+- El botón de administración del encabezado apunta a `../admin//index.html`. Desde la raíz del sitio, esa ruta queda fuera del proyecto. Debería ser `admin/`.
+- `noticias.html` y los archivos `news.json`, `events.json`, `faqs.json` y `team.json` no tienen contenido.
+- El atajo `Alt + I` abre el botón de información, pero todavía no hace nada.
+- `robots.txt` bloquea a todos los buscadores (`Disallow: /`). Puede estar bien mientras el sitio está en desarrollo, pero hay que cambiarlo antes del lanzamiento, porque el plan incluye la indexación en la versión 0.95.
 
----
+## Datos personales
 
-## 👤 Contacto y Autoría
+El archivo `data/members.json` contiene el nombre y el curso de los integrantes del Centro, que en su mayoría son estudiantes. Esos datos quedan públicos en el repositorio y en el sitio. Actualizarlos solo con autorización de cada persona.
 
-Proyecto diseñado, programado y mantenido por:
+## Seguridad
 
-- **Juan Martín Rodríguez**  
-  _Presidente del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
-    - **GitHub:** [@JohnMartinRB](https://github.com/JohnMartinRB)
-        - **Repositorio oficial:** [CE-IPET424](https://github.com/ce-ipet424/CE-IPET424)
-- **Gabriel Campana**  
-  _Secretario de RR. EE. del Centro de Estudiantes — IPET N° 424 (Gestión 2026)_
-    - **GitHub:** [@campanag721-tech](https://github.com/campanag721-tech)
+Si encontrás una falla de seguridad, reportala por correo a `ceipet424@gmail.com` antes de hacerla pública. La política completa está en `.well-known/security.txt`.
 
----
+Las credenciales secretas, como `GITHUB_CLIENT_SECRET`, se guardan como variables de entorno en Cloudflare y no van en el repositorio.
+
+## Contribuir
+
+Antes de programar, revisá la guía en [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md). En resumen: los identificadores de código van en inglés, los comentarios en español, y cada commit empieza con la versión y la fase, por ejemplo `[0.48.4-alpha]`.
+
+Para reportar errores o proponer funciones hay plantillas de issue en `.github/ISSUE_TEMPLATE/`.
+
+## Créditos y licencia
+
+Desarrollado por Juan Martín Rodríguez Bizón, presidente del Centro de Estudiantes (gestión 2026), y Gabriel Esteban Campana, secretario del Centro. Los créditos completos están en `humans.txt`.
+
+El código se distribuye bajo licencia MIT. Ver [LICENSE](./LICENSE).

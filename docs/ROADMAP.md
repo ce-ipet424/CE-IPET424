@@ -1,157 +1,231 @@
-## 🗺️ Roadmap de Desarrollo
+## Roadmap de desarrollo
 
 > **Planificación de versiones y ciclo de vida del Portal Institucional**
-> **Fecha de Lanzamiento Oficial v1.0:** 9 de marzo de 2027 🚀
+> **Fecha de lanzamiento oficial (v1.0):** 16 de marzo de 2027
+
+Este documento refleja el estado real del proyecto según el [CHANGELOG](../CHANGELOG.md). Las versiones completadas se marcan con `[x]`. Las pendientes se renumeraron a partir de la 0.49, siguiendo el orden original de prioridades. Cuando una función está hecha solo en parte, se aclara entre paréntesis.
 
 ---
 
-## 🟡 Fase 3: Ciclo Alpha (Versiones v0.26 - v0.30)
+## Fase 3: Ciclo Alpha (v0.26 a v0.40)
 
-_Enfoque: Arquitectura base, modularización, sistema de temas, accesibilidad y componentes interactivos._
+_Enfoque: arquitectura base, modularización, sistema de temas, accesibilidad y componentes interactivos._
 
-### 📦 Historial Reciente (Completado)
+### Completado
 
-- [x] **v0.26 - Feedback Sonoro (UI Sound Effects)**
-    - Implementación de motor de audio ligero en JavaScript para interacciones de interfaz.
-    - Sonidos para switches (modo oscuro/claro), clics en botones principales y apertura de modales.
-    - Control de activación/desactivación de sonido con persistencia en `localStorage`.
+- [x] **v0.26 - Feedback sonoro**
+    - Motor de audio liviano para interacciones de la interfaz.
+    - Sonidos para los switches de modo oscuro y claro, clics en botones principales y apertura de modales.
+    - Control de sonido con persistencia en `localStorage`.
 
-- [x] **v0.27 - Sistema de Novedades (What's New Modal)**
-    - Ventana emergente (modal/toast) interactiva al detectar una actualización de versión.
-    - Lectura dinámica del _changelog_ para mostrar las últimas mejoras al usuario al ingresar al sitio.
+- [x] **v0.27 - Sistema de novedades**
+    - Modal que aparece al detectar una nueva versión.
+    - Lectura dinámica del changelog para mostrar las últimas mejoras.
 
-- [x] **v0.28 - Arquitectura CSS & Rework de Variables**
-    - Expansión de `variables.css` para crear un sistema completo de _Design Tokens_.
-    - Estandarización de variables para `padding`, `margin`, `gap`, `border-radius`, escalas tipográficas y tiempos de transición.
-    - Refactorización de reglas eliminando valores estáticos (_hardcodeados_).
+- [x] **v0.28 - Arquitectura CSS y rework de variables**
+    - `variables.css` como sistema de design tokens.
+    - Estandarización de espaciados, bordes, escalas tipográficas y tiempos de transición.
 
-- [x] **v0.29 - Suite de Accesibilidad Ampliada & Refactorización Modular**
-    - Implementación de controles para ajustar el tamaño del texto (+ / -), alto contraste y fuente para dislexia.
+- [x] **v0.29 - Accesibilidad ampliada y refactorización modular**
+    - Controles para ajustar el tamaño del texto, alto contraste y fuente para dislexia.
     - Mejoras en la navegación por teclado (`:focus-visible`) y atributos ARIA.
-    - **Rework de estructura de archivos y carpetas:** Separación del CSS en arquitectura modular (`base/`, `layout/`, `components/`, `pages/`) unificados por un punto de entrada principal.
+    - CSS separado en `base/`, `layout/`, `components/` y `misc/`, unificado por `styles.css`.
 
-- [x] **v0.30 - Aside con Widget de Datos Curiosos & Documentación MD**
-    - Panel lateral desplegable (_aside drawer_) dedicado exclusivamente al widget interactivo "Sabías qué..." con datos curiosos e historia del IPET N° 424.
-    - Adición de nuevos archivos `.md` en la raíz para la documentación completa del repositorio y estándar del proyecto.
+- [x] **v0.30 - Aside con widget de datos curiosos y documentación en Markdown**
+    - Panel lateral dedicado al widget "Sabías qué...".
+    - Archivos `.md` en la raíz con la documentación del repositorio.
 
----
+- [x] **v0.31 - Consolidación de nombres e interfaz base**
+    - Subpáginas adaptadas al español y tarjetas principales ampliadas.
+    - Pantalla de carga dinámica según la subpágina.
 
-### 🚧 Fase 3: Ciclo Alpha (Versiones v0.31 - v0.40)
+- [x] **v0.32 - Rediseño estructural del footer**
+    - Pie de página en tres columnas: identidad, contacto y proyecto.
 
-- [x] **v0.31.0-alpha - Consolidación de Nombres e Interfaz Base**
-    - Adaptación completa de las subpáginas al español y ampliación de tarjetas principales.
-    - Reorganización y optimización de la pantalla de carga (_loader_) dinámica según la subpágina.
+- [x] **v0.33 - Módulos interactivos en el aside de novedades**
+    - Widgets de próximo feriado y frase diaria, con datos desde JSON.
+    - Modal para compartir el sitio y nuevos atajos de teclado.
 
-- [x] **v0.32.0-alpha - Rediseño Estructural del Footer**
-    - Reorganización del pie de página en un esquema limpio de tres columnas (Identidad, Contacto, Proyecto).
-    - Estandarización de tipografías, variables de color e incorporación de efectos en el modo interactivo.
+- [x] **v0.34 - Nuevas subpáginas institucionales**
+    - Páginas Recursos, Escuela y Herramientas.
+    - Persistencia del estado abierto o cerrado de los paneles laterales.
 
-- [x] **v0.33.0-alpha - Módulos Interactivos en Aside de Novedades**
-    - Incorporación de widgets dinámicos para próximos feriados y frase diaria aleatoria mediante fuentes JSON externas.
-    - Integración de un modal para compartir el sitio en redes sociales y nuevos atajos de teclado.
+- [x] **v0.35 - Términos y condiciones**
+    - Subpágina de términos con modal de aceptación obligatoria al ingresar.
 
-- [x] **v0.34.0-alpha - Nuevas Subpáginas Institucionales**
-    - Creación y despliegue inicial de las subpáginas _Recursos_ (descargas), _Escuela_ y _Herramientas_.
-    - Implementación de persistencia en `localStorage` para el estado abierto/cerrado de los paneles laterales (_asides_).
+- [x] **v0.36 - Temas estacionales**
+    - Temas de verano, mes rosa, misterio (Halloween) y festividades (Navidad).
+    - Modo escala de grises como capa visual independiente.
 
-- [x] **v0.35.0-alpha - Seguridad Legal y Términos de Uso**
-    - Adición de la subpágina de Términos y Condiciones junto a un modal de aceptación obligatoria al ingreso.
-    - Integración del enlace legal en el footer corporativo.
+- [x] **v0.37 - Personalización y descarga de horarios y calendario**
+    - Selector de cursos, divisiones y materias.
+    - Personalización de fuentes, paletas y visibilidad de docentes.
+    - Exportación a PNG y PDF.
 
-- [x] **v0.36.0-alpha - Sistema Dinámico de Temas Estacionales**
-    - Implementación de temas personalizados por temporadas (Verano, Mes Rosa, Misterio/Halloween y Festividades/Navidad).
-    - Refactorización completa del modo escala de grises como capa visual y optimización de variables globales de color.
+- [x] **v0.39 - Widgets de efeméride y vistas del sitio**
+    - Widget de efeméride diaria, con datos en `days.json`.
+    - Widget de vistas: diarias, mensuales, anuales y totales.
 
-* [x] **v0.37 - Módulo de Personalización & Descarga de Horarios / Calendario**
-    - Selector interactivo de cursos, divisiones y materias.
-    - Personalización de fuentes, paletas de colores y visibilidad de profesores.
-    - Exportación e impresión directa a formato PNG/PDF local.
-
-* [ ] **v0.38 - Sistema Dinámico de Fondos Visuales (Background Customizer)**
-    - Motor para alternar entre fondos dinámicos, patrones visuales y gradientes institucionales.
-    - Opciones de personalización con persistencia en `localStorage`.
-    - Ampliación del visor de _Changelog_ para permitir explorar el historial histórico completo de versiones desde los inicios.
-
-* [ ] **v0.39 - Subpágina Institucional de Novedades & Comunicados**
-    - Implementación de la sección dedicada a noticias del Centro de Estudiantes.
-    - Filtrado por etiquetas de importancia (_Urgente_, _Eventos_, _Institucional_).
-
-* [ ] **v0.40 - Rediseño Integral de Header & Menú de Navegación (Hito Principal)**
-    - Reestructuración completa de la cabecera superior (_Header Card_).
+- [x] **v0.40 - Rediseño integral del header y menú de navegación (hito principal)**
+    - Header renovado, con logos juntos, menús desplegables y botones con modales.
+    - Aside de configuración renombrado a `aside-news` y aside de widgets a `aside-widgets`.
+    - Texturas tecnológicas de fondo y nuevos cursores `.cur`.
 
 ---
 
-### 🚧 Fase 4: Ciclo Alpha (Versiones v0.41 - v0.50)
+## Fase 4: Ciclo Alpha (v0.41 a v0.50)
 
-- [ ] **v0.41 - Sistema de Avisos Flotantes & Alertas Rápidas (Toasts Urgentes)**
-    - Notificaciones flotantes temporales para asambleas, avisos de preceptoría o cambios de taller.
+_Enfoque: contenido institucional, búsqueda, lectura de documentos y experiencia visual._
 
-- [ ] **v0.42 - Widget Contador de Eventos & Exámenes**
-    - Reloj interactivo de cuenta regresiva para fechas clave (mesas de examen, entregas de carpetas, feriados o estudiantina).
+### Completado
 
-- [ ] **v0.43 - Subpágina de Guía Escolar & Directorio de Aulas/Talleres**
-    - Mapeo y lista estructurada de aulas, talleres de especialidad (Electromecánica e Informática) y horarios de consulta docente.
+- [x] **v0.41 - Términos actualizados y página de noticias**
+    - Términos y condiciones reescritos.
+    - Subpágina `noticias.html` creada vacía, para evitar enlaces rotos.
 
-- [ ] **v0.44 - Buscador Global Rápido por Teclado (`Ctrl + K`)**
-    - Modal flotante de búsqueda instantánea para filtrar trámites, archivos PDF, profesores y subpáginas sin recargar.
+- [x] **v0.42 - Versionado automático y toast de actualización**
+    - La versión se lee desde `data/version.json` y la usan el footer y los modales.
+    - Easter eggs en archivos individuales dentro de `js/extras/`.
+    - Toast para recargar la página cuando hay una nueva versión.
 
-- [ ] **v0.45 - Galería Multimedia & Archivo Visual de Eventos**
-    - Módulo con visor de pantalla completa (_lightbox_) para fotografías de actividades del centro, muestras técnicas y torneos.
+- [x] **v0.43 - Animaciones de scroll reveal**
+    - Animación de entrada para las tarjetas del sitio.
+    - Efemérides nacionales y mundiales, con campo `tipo` en `days.json`.
+    - Carpeta `docs/` con ARCHITECTURE, CONTRIBUTING y ROADMAP.
 
-- [ ] **v0.46 - Modo Enfoque / Lectura Limpia para Documentos**
-    - Botón de lectura sin distracciones para reglamentos (AEC) y estatutos, optimizado para celulares.
+- [x] **v0.44 - Lectura de PDF dentro del sitio**
+    - Botón "Leer PDF" junto a "Descargar", que abre un visor en modal (`js/ui/pdf-reader.js`).
 
-- [ ] **v0.47 - Módulo de Sugerencias Categorizado & Votación Estudiantil**
-    - Evolución del buzón de contacto: clasificación por categorías (Talleres, Edificio, Deportes) y sistema de propuestas.
+- [x] **v0.45 - Buscador en el header**
+    - Modal de búsqueda que cubre subpáginas, PDFs, herramientas y documentación.
+    - Índice en `data/search-index.json`.
+    - Se abre con `Alt + B`. El atajo `Ctrl + K` todavía no existe (ver v0.54).
 
-- [ ] **v0.48 - Microinteracciones, Animaciones & Transiciones de Navegación**
-    - Pulido de efectos de entrada, _hover_ en tarjetas y transiciones suaves entre páginas.
+- [x] **v0.46 - Reorganización de atajos de teclado y sección de integrantes**
+    - Atajos rediseñados con prefijo `Alt`.
+    - Sección de integrantes en `nosotros.html`, con `members.json`.
 
-- [ ] **v0.49 - Auditoría de Rendimiento, Limpieza de CSS & Compresión de Assets**
-    - Optimización masiva de imágenes, depuración de CSS obsoleto tras los rediseños y preparación final para la PWA.
+- [x] **v0.47 - Reorganización de archivos**
+    - CSS y JS específicos de subpáginas movidos a `css/modules/` y `js/modules/`, y se cargan solo donde se usan.
 
-- [ ] **v0.50 - Rediseño de Paleta Base: Tonos Calipso & Tokens Temáticos**
-    - Incorporación de los tonos **Calipso** a la paleta de colores cromática principal del sitio.
-    - Creación de variables CSS específicas (`--color-theme-*`) para la gestión limpia de temas (Alto Contraste, Modo Code, Daltonismo, etc.).
-
----
-
-### 🚧 Fase 5: Ciclo Alpha (Versiones v0.51 - v0.60)
-
-- [ ] **v0.51 - Menú Hamburguesa Mobile & Panel de Configuración**
-    - Implementación de menú de navegación colapsable (_hamburguesa_) pensado para dispositivos móviles.
-    - Creación de modal/panel emergente de **Configuración** para centralizar controles de audio, temas y accesibilidad.
-
-## 🔵 Fase de Desarrollo Seria: Ciclo Beta
-
-_Enfoque: Carga de contenido institucional real, participación estudiantil y pruebas con alumnos._
-_Período: Mediados de Enero de 2027 a Febrero de 2027_
-
-- [ ] **Integración de Contenido Real Institucional (Enero 2027)**
-    - Reemplazo de textos de prueba (_Lorem Ipsum_) por información verídica del IPET N° 424: talleres, especialidades, autoridades, horarios y reglamentos.
-
-- [ ] **Módulo de Feedback Estudiantil & Encuestas (Enero 2027)**
-    - Formulario e interfaz interactiva para la recolección de opiniones, sugerencias y consultas de los alumnos hacia el Centro de Estudiantes.
-
-- [ ] **Pruebas de Usabilidad & Control de Calidad (Febrero 2027)**
-    - Despliegue de versiones Beta cerradas con el alumnado para auditar la experiencia de usuario (UX) en celulares y computadoras de la escuela.
+- [x] **v0.48 - Panel de administración (en curso, ver abajo)**
+    - Acceso desde el header, Decap CMS y configuración inicial de colecciones.
 
 ---
 
-## 🟢 Pre-Lanzamiento y Versión Oficial (v0.90 - v1.0)
+## En curso
 
-_Enfoque: Rendimiento extremo, SEO, capacidades PWA offline y publicación final._
-_Período: Finales de Febrero de 2027 a Marzo de 2027_
+- [ ] **Panel de administración con Decap CMS (0.48.x)**
+    - Colecciones activas: frases, datos curiosos, efemérides, feriados e integrantes.
+    - Media Library con Cloudinary (0.48.3).
+    - Pendiente: incorporar noticias, eventos, FAQs y equipo al CMS (pasa a la v0.49).
+    - Pendiente: corregir la ruta del botón de admin del header (ver "Correcciones pendientes").
 
-- [ ] **v0.90 - Modo Off-Line & Optimización PWA (Febrero 2027)**
-    - Registro de _Service Worker_ (`sw.js`) para garantizar el funcionamiento del sitio sin conexión en zonas del colegio con baja cobertura.
-    - Configuración de `manifest.json` y almacenamiento en caché local para permitir la instalación de la web como app nativa en Android/iOS/PC.
+---
 
-- [ ] **v0.95 - Optimización SEO, Indexación & Metadatos OpenGraph (Febrero 2027)**
-    - Creación de `sitemap.xml`, `robots.txt` y verificación en Google Search Console.
-    - Implementación completa de etiquetas OpenGraph y Twitter Cards para vistas previas en WhatsApp y redes sociales.
-    - Auditoría de rendimiento con Google Lighthouse (puntuación objetivo > 90 en Performance, Accesibilidad y SEO).
+## Fase 5: Ciclo Alpha (v0.49 a v0.62)
 
-- [ ] **v1.0 - LANZAMIENTO OFICIAL (9 de Marzo de 2027) 🎓🎉**
-    - Despliegue de la versión estable final para el inicio del Ciclo Lectivo 2027.
-    - Presentación pública del Portal Web del Centro de Estudiantes a la comunidad educativa del IPET N° 424.
+_Enfoque: completar el contenido dinámico, mejorar la navegación y pulir la experiencia._
+
+- [ ] **v0.49 - Panel de administración completo**
+    - Noticias, eventos, FAQs y equipo editables desde el CMS.
+    - Revisión del flujo editorial y de los permisos del repositorio.
+
+- [ ] **v0.50 - Subpágina de noticias y comunicados**
+    - Listado de noticias del Centro, con filtros por etiqueta: Urgente, Eventos e Institucional.
+    - Carga desde `data/news.json` (hoy vacío). La página `noticias.html` ya existe.
+
+- [ ] **v0.51 - Avisos flotantes urgentes**
+    - Notificaciones temporales para asambleas, avisos de preceptoría o cambios de taller.
+    - Reutiliza el sistema de toasts existente (`js/ui/toasts.js`).
+
+- [ ] **v0.52 - Contador de eventos y exámenes**
+    - Cuenta regresiva para fechas clave: mesas de examen, entregas de carpetas, feriados o estudiantina.
+    - Ya existe una cuenta regresiva para el próximo feriado en el widget (parcial).
+
+- [ ] **v0.53 - Guía escolar y directorio de aulas y talleres**
+    - Lista de aulas, talleres de especialidad (Electromecánica e Informática) y horarios de consulta docente.
+
+- [ ] **v0.54 - Búsqueda rápida con `Ctrl + K`**
+    - Atajo `Ctrl + K` para el buscador, además de `Alt + B`.
+    - Filtrado de trámites, PDFs, docentes y subpáginas sin recargar.
+
+- [ ] **v0.55 - Galería multimedia y archivo de eventos**
+    - Visor a pantalla completa (lightbox) para fotos de actividades, muestras técnicas y torneos.
+    - Carpetas `assets/img/gallery/` ya preparadas (parcial).
+
+- [ ] **v0.56 - Modo enfoque para documentos**
+    - Botón de lectura sin distracciones para reglamentos (AEC) y estatutos, pensado para celular.
+
+- [ ] **v0.57 - Sugerencias categorizadas y votación estudiantil**
+    - Evolución del buzón de contacto: categorías (Talleres, Edificio, Deportes) y sistema de propuestas.
+
+- [ ] **v0.58 - Microinteracciones y transiciones entre páginas**
+    - Efectos de hover en tarjetas y transiciones suaves al navegar (el scroll reveal ya está hecho, desde v0.43).
+
+- [ ] **v0.59 - Fondos visuales dinámicos**
+    - Motor para alternar entre fondos, patrones y gradientes institucionales.
+    - Opciones de personalización guardadas en `localStorage`.
+
+- [ ] **v0.60 - Auditoría de rendimiento y limpieza de CSS**
+    - Compresión de imágenes y eliminación de CSS obsoleto tras los rediseños.
+    - Preparación de assets para la PWA.
+
+- [ ] **v0.61 - Paleta base con tonos Calipso y tokens temáticos**
+    - Tonos Calipso en la paleta principal.
+    - Variables `--color-theme-*` para temas como alto contraste, modo código y daltonismo.
+
+- [ ] **v0.62 - Menú hamburguesa y panel de configuración en celular**
+    - Menú de navegación colapsable para celulares.
+    - Panel de configuración centralizado para audio, temas y accesibilidad (el panel de configuración ya existe en escritorio).
+
+---
+
+## Fase de desarrollo serio: Ciclo Beta
+
+_Enfoque: carga de contenido institucional real, participación estudiantil y pruebas con alumnos._
+_Período: mediados de enero de 2027 a febrero de 2027._
+
+- [ ] **Integración de contenido real institucional (enero 2027)**
+    - Reemplazo de los textos de prueba por información verificada del IPET N° 424: talleres, especialidades, autoridades, horarios y reglamentos.
+
+- [ ] **Módulo de feedback estudiantil y encuestas (enero 2027)**
+    - Formulario e interfaz para recolectar opiniones, sugerencias y consultas de los alumnos.
+
+- [ ] **Pruebas de usabilidad y control de calidad (febrero 2027)**
+    - Versiones beta cerradas con el alumnado, para revisar la experiencia en celulares y computadoras de la escuela.
+
+---
+
+## Pre-lanzamiento y versión oficial (v0.90 a v1.0)
+
+_Enfoque: rendimiento, SEO, funcionamiento sin conexión y publicación final._
+_Período: fines de febrero de 2027 a marzo de 2027._
+
+- [ ] **v0.90 - Modo sin conexión y optimización PWA (febrero 2027)**
+    - Registro de un Service Worker (`sw.js`) para que el sitio funcione sin conexión en zonas del colegio con poca señal.
+    - El manifest ya existe (`data/manifest.json`). Falta el registro del Service Worker y la caché local.
+
+- [ ] **v0.95 - Optimización SEO, indexación y metadatos OpenGraph (febrero 2027)**
+    - Creación de `sitemap.xml`, verificación en Google Search Console y etiquetas OpenGraph y Twitter Cards.
+    - Auditoría con Google Lighthouse (puntaje objetivo mayor a 90 en Performance, Accesibilidad y SEO).
+    - Requiere cambiar `robots.txt`, que hoy bloquea a todos los buscadores.
+
+- [ ] **v1.0 - Lanzamiento oficial (9 de marzo de 2027)**
+    - Versión estable para el inicio del ciclo lectivo 2027.
+    - Presentación pública del portal a la comunidad educativa del IPET N° 424.
+
+---
+
+## Correcciones pendientes
+
+Estas tareas no tienen versión asignada. Son arreglos chicos que conviene hacer antes de la v0.90.
+
+- [ ] Agregar los nueve archivos que enlaza `recursos.html` (letras de himnos, audios y banderas), o quitar los enlaces.
+- [ ] Corregir la ruta del botón de admin del header (`../admin//index.html` debe ser `admin/`).
+- [ ] Renombrar `aside-news` o cambiar su contenido: hoy el panel tiene las opciones de configuración, no novedades.
+- [ ] Asignar una función al botón de información (`Alt + I`) o quitarlo.
+- [ ] Quitar `notes.txt` del repositorio, si fue subido alguna vez.
+- [ ] Unificar el nombre de la organización del repositorio en `humans.txt`, `robots.txt` y `security.txt`.
+- [ ] Revisar la publicación de los datos de integrantes en `data/members.json`.
+- [ ] Revisar la clave de Cloudinary guardada en `admin/config.yml`.

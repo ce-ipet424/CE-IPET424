@@ -210,5 +210,12 @@
         "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/docs/ROADMAP.md",
         "description": "Planificación a futuro, fases de desarrollo y próximas funciones del proyecto.",
         "keywords": ["roadmap", "hoja de ruta", "plan", "futuro", "versiones", "etapas", "docs"]
+    },
+    {
+        "title": "Hitos / Metas (Milestones)",
+        "type": "Documentación",
+        "url": "https://github.com/ce-ipet424/CE-IPET424/blob/main/docs/MILESTONES.md",
+        "description": "Registro de los hitos en el desarrollo de la web.",
+        "keywords": ["hitos", "logros", "metas", "historial", "versiones", "desarrollo", "docs"]
     }
 ]

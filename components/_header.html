@@ -41,6 +41,14 @@
                     <a href="contacto.html">Contacto</a>
                 </div>
             </div>
+            <div class="header-dropdown" id="dropdown-proyecto">
+                <button class="header-nav-button" id="nav-item-proyecto">PROYECTO <span class="arrow">▾</span></button>
+                <div class="dropdown-content">
+                    <a href="proyecto-web.html">Sobre la Web</a>
+                    <a href="creditos.html">Créditos</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
+                </div>
+            </div>
             <div class="header-dropdown">
                 <button class="header-nav-button">ESCUELA <span class="arrow">▾</span></button>
                 <div class="dropdown-content">
@@ -76,14 +84,9 @@
             <button class="header-icon-button" id="header-button-share" title="Compartir">
                 <img src="assets/img/icons/header/share.svg" />
             </button>
-            <button
-                class="header-icon-button"
-                id="header-button-admin"
-                href="../admin//index.html"
-                title="Administración"
-            >
+            <a class="header-icon-button" id="header-button-admin" href="../admin/index.html" title="Administración">
                 <img src="assets/img/icons/header/admin.svg" />
-            </button>
+            </a>
         </div>
     </div>
     <div id="header-progress-bar-container" class="header-progress-bar-container">
@@ -181,6 +184,85 @@
                 ⟲
             </button>
         </div>
+    </div>
+</div>
+
+<div id="content-info" class="modal-source-content" style="display: none">
+    <div class="info-modal-wrapper">
+        <section class="info-section">
+            <h3 class="info-section-title">Guía rápida de funciones</h3>
+            <ul class="info-guide-list">
+                <li>
+                    <strong>Buscador rápido:</strong> Abrí la lupa para buscar páginas, trámites, herramientas o PDFs
+                    (como CUS, estatuto o convivencia) por palabra clave.
+                </li>
+                <li>
+                    <strong>Temas y accesibilidad:</strong> Cambiá entre modos visuales (oscuro, alto contraste, código,
+                    descanso o estacionales) y ajustá el tamaño de letra, daltonismo o dislexia.
+                </li>
+                <li>
+                    <strong>Paneles laterales y compartir:</strong> Alterná los paneles laterales de noticias y widgets,
+                    o copiá/compartí el enlace del sitio en un clic.
+                </li>
+                <li>
+                    <strong>Documentos PDF:</strong> Los PDFs institucionales y trámites se abren directamente desde el
+                    sitio para consultarlos sin perderte.
+                </li>
+            </ul>
+        </section>
+        <section class="info-section">
+            <h3 class="info-section-title">Atajos de teclado</h3>
+            <div class="info-table-wrapper">
+                <table class="info-shortcuts-table">
+                    <thead>
+                        <tr>
+                            <th>Atajo</th>
+                            <th>Acción</th>
+                            <th>Atajo</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>B</kbd></td>
+                            <td>Abrir buscador del sitio</td>
+                            <td><kbd>Alt</kbd> + <kbd>T</kbd></td>
+                            <td>Abrir temas y colores</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>A</kbd></td>
+                            <td>Abrir opciones de accesibilidad</td>
+                            <td><kbd>Alt</kbd> + <kbd>C</kbd></td>
+                            <td>Abrir opciones de configuración</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>E</kbd></td>
+                            <td>Abrir opciones para compartir</td>
+                            <td><kbd>Alt</kbd> + <kbd>I</kbd></td>
+                            <td>Abrir ayuda / info</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>N</kbd></td>
+                            <td>Mostrar/ocultar panel de noticias</td>
+                            <td><kbd>Alt</kbd> + <kbd>W</kbd></td>
+                            <td>Mostrar/ocultar panel de widgets</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>O</kbd></td>
+                            <td>Activar modo oscuro</td>
+                            <td><kbd>Alt</kbd> + <kbd>D</kbd></td>
+                            <td>Activar modo descanso</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>Alt</kbd> + <kbd>L</kbd></td>
+                            <td>Copiar enlace del sitio</td>
+                            <td><kbd>Esc</kbd></td>
+                            <td>Cerrar ventana modal activa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </div>
 </div>
 
