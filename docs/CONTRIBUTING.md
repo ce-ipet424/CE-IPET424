@@ -1,112 +1,116 @@
-# 🤝 Guía de Contribución y Convenciones — CE-IPET424
+# Guía de contribución y convenciones: CE-IPET424
 
-¡Bienvenido/a al equipo de desarrollo del sitio web del Centro de Estudiantes del IPET N° 424!
+¡Bienvenido al equipo de desarrollo del sitio web del Centro de Estudiantes del IPET N° 424!
 
-Este documento establece las pautas y estándares de trabajo para mantener el código limpio, organizado y evitar conflictos al programar en equipo.
-
----
-
-## 📌 1. Flujo de Trabajo en Git y GitHub
-
-1. **Antes de empezar a programar:**  
-   Siempre hacé un `git pull` para asegurarte de tener la versión más reciente subida al repositorio.
-2. **Durante el desarrollo:**  
-   Asegurate de que tus cambios sean acordes a la tarea asignada.
-   Evitá modificar archivos no relacionados.
-   En caso de que surjan funciones o cambios random, consultalo previamente.
-3. **Al finalizar una tarea:**  
-   Realizá un `commit` con el número de parche y la lista de cambios.
-   Realizá un `push` para sincronizar los avances.
-   Si tenés dudas con el número de versión parche, revisá el historial en GitHub antes de enviar los cambios.
+Este documento fija las pautas de trabajo para mantener el código limpio, ordenado y sin conflictos cuando se programa en equipo. Para entender cómo está organizado el proyecto, antes conviene leer [ARCHITECTURE.md](./ARCHITECTURE.md).
 
 ---
 
-## 🏷️ 2. Mensajes de Commit y Versionado (SemVer)
+## 1. Flujo de trabajo en Git y GitHub
 
-Es importante seguir el estándar de **Semantic Versioning** adaptado a la fase actual de desarrollo:
+Cada push a `main` se publica en producción mediante GitHub Pages. Por eso no se trabaja directamente sobre `main`.
 
-### Formato del mensaje de commit:
+1. **Antes de empezar.** Actualizá tu copia local con `git pull origin main`.
+2. **Crear una rama para cada tarea.** Usá un nombre corto en kebab-case con el tipo de cambio, por ejemplo `fix/ruta-admin-header` o `feat/buscador-ctrl-k`.
+3. **Mientras programás.** Tus cambios tienen que corresponder a la tarea asignada. Si necesitás tocar un archivo no relacionado, o si surge una función nueva, consultalo antes con el equipo.
+4. **Al terminar la tarea.** Hacé un commit siguiendo el formato de la sección 2, subí la rama con `git push` y abrí un pull request hacia `main`.
+5. **Revisión.** Antes de integrar, revisá el pull request en el navegador: probá la página afectada en celular y en computadora, y en modo claro y oscuro.
+
+Si tenés dudas con el número de versión que corresponde al commit, revisá el historial del repositorio y el [CHANGELOG](../CHANGELOG.md) antes de enviar los cambios.
+
+---
+
+## 2. Mensajes de commit y versionado
+
+El proyecto usa versionado semántico adaptado a la fase alfa: `MAYOR.MENOR.PARCHE-fase`. Un cambio grande sube el número del medio, y una corrección sube el último número.
+
+### Formato del mensaje
+
+Cada commit empieza con la versión y la fase entre corchetes, seguida de una descripción clara en español, en infinitivo o en pasado. Así:
 
 ```text
-[VERSIÓN-FASE] Seguido de la descripción clara de lo que se modificó o agregó
-
-### Ejemplos válidos:
-* `0.29.0-alpha
-    Se rediseñó la tarjeta del header`
-* `0.29.1-alpha
-    Se corrigió la alineación de los botones en celular`
-* `0.30.0-beta
-    Se cargó el contenido institucional en el sitio`
+[VERSIÓN-FASE] Descripción de lo que se modificó o agregó
 ```
 
----
+Ejemplos:
 
-## 💻 3. Convenciones de Código y Nomenclatura
+```text
+[0.48.4-alpha] Se corrigió la ruta del botón de admin en el header
+[0.49.0-alpha] Se agregó la colección de noticias al panel de administración
+[0.48.5-alpha] Se ajustó el padding de las tarjetas en celular
+```
 
-Para facilitar el mantenimiento del código, respetamos las siguientes reglas según la tecnología:
+### Cómo se sube la versión
 
-### 🌐 HTML / CSS
+Cuando una versión está lista para publicarse, hay que actualizar estos archivos en el mismo pull request:
 
-- **Clases e IDs (CSS/HTML):**
-  Deben estar escritos en **inglés** usando el formato `kebab-case`.
-    - _Ejemplo:_ `.button-primary`, `#main-header`, `.card-title`.
-- **Variables CSS (Design Tokens):**
-  Se definen en `css/base/variables.css` usando `kebab-case`.
-  Utilizá siempre las variables globales en lugar de valores fijos (`hardcodeados`) .
-
-### ⚡ JavaScript (ES6+)
-
-- **Variables y Funciones:**
-  Deben estar escritos en **inglés** usando el formato `camelCase` .
-    - _Ejemplo:_ `const darkModeButton`, `function toggleAccessibility()`.
-- **Constantes Globales:**
-  Deben estar escritos en mayúsculas con guiones bajos (`UPPER_SNAKE_CASE`).
-    - _Ejemplo:_ `MAX_FONT_SIZE`.
-
-### 💬 Comentarios y Documentación
-
-- Todos los comentarios dentro del código (explicaciones de funciones, bloques CSS) deben escribirse en **ESPAÑOL** .
+- `data/version.json`: cambiar `label`, `version`, `type` y `date`. El footer y los modales leen este archivo, así que no hay que tocar nada más para mostrar la versión nueva.
+- `CHANGELOG.md`: agregar la sección de la versión arriba de todo, con los cambios en viñetas.
+- `README.md`: actualizar la tabla de estado y la sección de versiones, que hoy tienen el número escrito a mano.
+- `humans.txt`: actualizar la fecha de `Last update`.
 
 ---
 
-## 📂 4. Estructura de Archivos y Carpetas
+## 3. Convenciones de código y nomenclatura
 
-Respetá el lugar correspondiente para cada nuevo archivo:
+Para facilitar el mantenimiento, se siguen estas reglas según la tecnología.
+
+### HTML y CSS
+
+- **Clases e IDs.** Se escriben en inglés, en `kebab-case`: `.button-primary`, `#main-header`, `.card-title`.
+- **Variables CSS (design tokens).** Se definen en `css/base/variables.css`, también en `kebab-case`. Usá siempre las variables globales en lugar de valores fijos, como colores, espaciados o tiempos de transición.
+- **Hojas de estilo.** Un estilo nuevo va en la carpeta que corresponde: `base/` para variables y tipografía, `components/` para componentes reutilizables, `layout/` para la estructura de la página y `modules/` solo para subpáginas con lógica propia.
+
+### JavaScript (ES6+)
+
+- **Variables y funciones.** En inglés, en `camelCase`: `const darkModeButton`, `function toggleAccessibility()`.
+- **Constantes globales.** En mayúsculas con guiones bajos: `MAX_FONT_SIZE`.
+- **Módulos.** Cada archivo exporta sus funciones de inicialización (por ejemplo `initWidgets`) y `js/main.js` las llama. No agregues lógica nueva en `main.js` más allá de la inicialización.
+- **Claves de `localStorage`.** Usá `camelCase`. Las claves que ya existen no se renombran, porque cambiarlas borra la preferencia guardada de todos los visitantes.
+
+### Nombres de archivos
+
+Los archivos y carpetas se escriben en `kebab-case`: `pdf-reader.js`, `search-index.json`. Los fragmentos de `components/` empiezan con guion bajo (`_header.html`), porque se cargan con `fetch` y no son páginas.
+
+### Comentarios y documentación
+
+Todos los comentarios dentro del código, como explicaciones de funciones o bloques de CSS, se escriben en **español**. Los nombres de variables, clases y funciones siguen en inglés.
+
+Cada cambio que agregue una función visible para el usuario tiene que quedar en el CHANGELOG. Si cambia la estructura de carpetas, actualizá también ARCHITECTURE.md.
+
+### Accesibilidad
+
+Todo componente nuevo tiene que poder usarse con teclado, mostrar el foco con `:focus-visible` y tener atributos ARIA cuando lo necesite. Antes de integrar, probalo con la fuente de dislexia y con el tamaño de texto al 130 %.
+
+---
+
+## 4. Estructura de archivos y carpetas
+
+La estructura completa, con la función de cada archivo, está en [ARCHITECTURE.md](./ARCHITECTURE.md). Estas son las carpetas principales:
 
 ```text
 CE-IPET424/
-├── assets/                 # Recursos estáticos (audio, img, docs, fonts, json)
-├── components/             # Fragmentos HTML reutilizables (_header.html, _footer.html)
-├── css/                    # Hojas de estilo modularizadas
-│   ├── base/               # Reset, variables, fuentes, accesibilidad
-│   ├── components/         # Estilos por componente (botones, modales, cards)
-│   ├── layout/             # Estilos de maquetación (header, footer, asides)
-│   └── misc/               # Estilos específicos o random
-├── js/                     # Lógica y scripts
-│   ├── ui/                 # Controladores de interfaz y DOM
-│   └── utils/              # Funciones auxiliares, accesibilidad y sonido
-└── CHANGELOG.md            # Registro oficial de actualizaciones
+├── admin/                 # Panel de administración (Decap CMS)
+├── assets/                # Imágenes, fuentes, audio, documentos y librerías
+├── components/            # Fragmentos HTML compartidos (header, footer, paneles)
+├── css/                   # Hojas de estilo: base, components, layout, misc y modules
+├── data/                  # Contenido del sitio en JSON
+├── docs/                  # Documentación del proyecto
+├── functions/             # Funciones de Cloudflare Pages (inicio de sesión del CMS)
+└── js/                    # Módulos: ui, utils, modules, extras y main.js
 ```
 
-## 🛠️ 5. Herramientas Recomendadas en VS Code
-
-Para mantener la calidad del código, el formato y una interfaz de trabajo ágil, te sugerimos instalar y usar estas extensiones en Visual Studio Code:
-
-### ⚙️ Extensiones Funcionales
-
-- **Prettier - Code formatter:** Mantiene el formato, la sangría y el espaciado uniforme en HTML, CSS y JS.
-- **Code Spell Checker:** Te alerta si escribís variables o clases en inglés con errores de ortografía.
-- **Live Server:** Levanta un servidor local para previsualizar los cambios en tiempo real en el navegador.
-- **Error Lens:** Resalta los errores de sintaxis y _warnings_ directamente en la línea de código sin tener que pasar el cursor sobre la falla.
-- **Sort CSS:** Permite reordenar las propiedades de los selectores CSS automáticamente siguiendo un criterio uniforme (Inside-Out / Concentric).
-- **vscode-google-translate:** Permite traducir selecciones de texto o nombres de variables del español al inglés directamente dentro del editor.
-- **vscode-pdf:** Permite visualizar y validar documentos PDF (como los formularios institucionales) directamente desde la ventana de VS Code sin abrir el navegador.
+Respetá la carpeta que corresponde a cada archivo nuevo. Si no encontrás un lugar claro, consultalo antes de crear una carpeta.
 
 ---
 
-### 🎨 Extensiones Estéticas y Visuales
+## 5. Herramientas recomendadas en VS Code
 
-- **Material Icon Theme:** Asigna íconos vectoriales modernos y específicos a cada archivo y carpeta según su nombre (`css`, `js`, `components`, etc.).
-- **Indent Rainbow:** Colorea las sangrías (indentación) con tonos suaves para distinguir fácilmente los niveles de anidamiento en HTML, CSS y JS.
-- **Image Preview:** Muestra una pequeña vista previa (miniatura) de las imágenes e íconos en el margen izquierdo del código al escribir rutas en HTML o CSS.
-- **Fluent Icons:** Actualiza y estiliza los íconos de la interfaz de VS Code con el sistema de diseño Fluent de Microsoft.
+Estas extensiones son recomendadas, pero no obligatorias:
+
+- **Prettier - Code formatter:** mantiene el formato, la sangría y el espaciado en HTML, CSS y JS.
+- **Live Server:** levanta un servidor local para ver los cambios en el navegador. Como el sitio usa módulos y `fetch`, no conviene abrir los archivos con doble clic.
+- **Error Lens:** muestra los errores y advertencias en la misma línea del código.
+- **Code Spell Checker:** avisa de errores de ortografía en comentarios y nombres.
+
+Para revisar los PDF de trámites desde el editor, también sirve cualquier visor de PDF, aunque no sea una extensión de VS Code.

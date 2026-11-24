@@ -12,6 +12,7 @@ export function initShortcuts() {
         e: "header-button-share",
         t: "header-button-themes",
         a: "header-button-accessibility",
+        i: "header-button-info",
 
         o: "button-dark",
         d: "button-rest",

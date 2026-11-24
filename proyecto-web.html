@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- ETIQUETAS META -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta
+            name="description"
+            content="Enterate de las últimas novedades, anuncios y avisos importantes compartidos por el Centro de Estudiantes del IPET N° 424."
+        />
+        <meta name="theme-color" id="theme-color" content="#0088FF" />
+        <!-- TITULO DE LA PESTAÑA Y FAVICON -->
+        <title>Proyecto Web | Centro de Estudiantes IPET N° 424</title>
+        <link rel="icon" id="favicon" type="image/png" href="assets/img/favicons/light.png" sizes="any" />
+        <!-- CSS Y JAVASCRIPT -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="module" src="js/main.js"></script>
+    </head>
+
+    <body>
+        <!-- PANTALLA DE CARGA -->
+        <div id="loader-screen" class="loader-screen">
+            <div id="loader-content" class="loader-content">
+                <div id="loader-spinner" class="loader-spinner"></div>
+                <h2 id="loader-title">Proyecto Web</h2>
+                <div id="loader-subtext"><p>Cargando...</p></div>
+            </div>
+        </div>
+        <!-- HEADER: TÍTULO, NAVEGACIÓN Y OPCIONES -->
+        <div id="header-container" class="header-container"></div>
+        <!-- BARRA DE NAVEGACIÓN POR SUBPÁGINA -->
+        <nav id="nav-card" class="nav-card">
+            <button id="nav-button-menu" class="button nav-button-menu" aria-label="Abrir menú">☰</button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a class="nav-menu-link" href="#desarrolladores">Equipo Web</a></li>
+                <li><a class="nav-menu-link" href="#colaboradores">Estudiantes Colaboradores</a></li>
+                <li><a class="nav-menu-link" href="#tecnologias">Stack Tecnológico</a></li>
+                <li><a class="nav-menu-link" href="#agradecimientos">Agradecimientos</a></li>
+                <li><a class="nav-menu-link" href="#licencia">Licencia Abierta</a></li>
+            </ul>
+        </nav>
+        <!-- PANEL LATERAL DE NOVEDADES -->
+        <div id="aside-news-container" class="aside-news-container"></div>
+        <!-- PANEL LATERAL DE WIDGETS -->
+        <div id="aside-widgets-container" class="aside-widgets-container"></div>
+        <!-- CONTENEDOR PRINCIPAL -->
+        <main id="main-content" class="main-content">
+            <!-- SECCIÓN: INICIO / INFORMATIVA -->
+            <section id="inicio" class="section-card hero-section">
+                <h2>Proyecto Web</h2>
+                <p class="text paragraph">Nuestro proyecto de sitio</p>
+            </section>
+        </main>
+        <!-- PIE DE PÁGINA -->
+        <div id="footer-container" class="footer-container"></div>
+        <!-- BOTÓN DE VOLVER ARRIBA -->
+        <button class="button-round button-scroll-top" id="button-scroll-top" aria-label="Volver arriba">↑</button>
+        <!-- VENTANA MODAL DE ACEPTAR TÉRMINOS -->
+        <div id="modal-terms-container" class="modal-terms-container"></div>
+        <!-- VENTANA MODAL "EN DESARROLLO" -->
+        <div id="modal-in-dev-container" class="modal-in-dev-container"></div>
+        <!-- VENTANA MODAL DE NOVEDADES -->
+        <div id="modal-whats-new-container" class="modal-whats-new-container"></div>
+    </body>
+</html>

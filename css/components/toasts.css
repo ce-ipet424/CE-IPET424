@@ -40,3 +40,13 @@
     opacity: 1;
     pointer-events: auto;
 }
+
+.toast-close-button {
+    margin-left: var(--space-xs);
+    border: none;
+    background: none;
+    cursor: var(--pointer);
+}
+.button-reload-page {
+    margin-left: var(--space-xs);
+}
