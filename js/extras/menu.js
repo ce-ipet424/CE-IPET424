@@ -30,7 +30,7 @@ export function initMenu() {
             emptyClicks = 0;
             rightClicks = 0;
         }, 1500);
-        if (emptyClicks >= 7 || rightClicks >= 4) {
+        if (emptyClicks >= 10 || rightClicks >= 6) {
             emptyClicks = 0;
             rightClicks = 0;
             clearTimeout(clickResetTimer);
@@ -42,7 +42,7 @@ export function initMenu() {
         const toast = document.createElement("div");
         toast.id = "cheeky-toast";
         toast.innerHTML = `
-        <div style="font-size: 1.4rem; margin-bottom: 0.5rem;"> <strong>¿Buscando algo oculto?</strong>🕵️</div>
+        <div style="font-size: 1.4rem; margin-bottom: 0.5rem;"> <strong>¿Buscando algo oculto?</strong></div>
         <p style="margin: 0; font-size: 1rem;">
             Acá no hay botones invisibles... probá escribiendo 'matrix' o 'flip' en el teclado, o abrí la consola (F12) y escribí 'ce.ayuda()' 😉
         </p>

@@ -65,7 +65,7 @@
     --text-button-hover: var(--azul1);
     --border-button: var(--lila2);
     --bg-header-icon-hover: var(--celeste5);
-    --bg-aside-button-hover: var(--celeste6);
+    --bg-aside-button-hover: rgba(0, 0, 0, 0.1);
     --aside-button-icon: var(--celeste5);
     --bg-scroll-button: var(--celeste5);
     --bg-scroll-button-hover: var(--celeste3);
@@ -91,6 +91,7 @@
     --scrollbar-thumb-hover: var(--celeste3);
     /* WIDGET */
     --bg-widget: rgba(129, 129, 129, 0.15);
+    --bg-widget-hover: rgba(129, 129, 129, 0.3);
     --text-widget: var(--azul1);
     --border-widget: rgba(129, 129, 129, 0.2);
 

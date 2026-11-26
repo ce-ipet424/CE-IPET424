@@ -29,7 +29,7 @@ Está hecho con HTML, CSS y JavaScript, sin frameworks ni proceso de compilació
 
 | Dato                        | Detalle                         |
 | :-------------------------- | :------------------------------ |
-| Versión actual              | 0.49-alpha (24/11/2026)         |
+| Versión actual              | 0.50-alpha (26/11/2026)         |
 | Inicio del desarrollo       | 7 de agosto de 2026             |
 | Lanzamiento previsto (v1.0) | 9 de marzo de 2027              |
 | Fase                        | Alpha                           |
@@ -53,6 +53,8 @@ La fase alpha significa que el sitio ya funciona, pero algunas secciones todaví
 | `herramientas.html` | Herramientas y utilidades para estudiantes                                                         |
 | `proyectos.html`    | Proyectos, talleres, torneos y acción social del Centro                                            |
 | `noticias.html`     | Sección de noticias preparada, todavía sin contenido                                               |
+| `proyecto-web.html` | Información sobre el sitio web                                                                     |
+| `aviso-legal.html`  | Aviso legal del sitio (Licencia)                                                                   |
 | `terminos.html`     | Términos, condiciones y políticas de privacidad                                                    |
 | `creditos.html`     | Créditos del proyecto y del equipo de desarrollo                                                   |
 | `404.html`          | Página de error                                                                                    |
@@ -136,15 +138,7 @@ El árbol completo, con la función de cada archivo, está en [docs/ARCHITECTURE
 
 El número de versión sigue un esquema semántico adaptado a la fase alpha. Un cambio grande sube el número del medio (0.47.0 a 0.48.0) y un arreglo sube el último número (0.48.2 a 0.48.3). La versión vigente se lee desde `data/version.json`, y el historial completo está en [CHANGELOG.md](./CHANGELOG.md).
 
-La última versión, 0.49.0-alpha, reworkeó toda la documentación del proyecto, haciéndola más compleja y completa, y sumando documentación nueva. Se añadió un nuevo botón de navegación en el header, se movieron unos botones y se arreglaron muchos enlaces en la documentación.
-
-## Pendientes conocidos
-
-- `recursos.html` enlaza nueve archivos que no están en el repositorio: tres letras de himnos en `assets/docs/patria/`, tres audios en `assets/audio/music/`, y tres imágenes en `assets/img/resources/`.
-- El botón de administración del encabezado apunta a `../admin//index.html`. Desde la raíz del sitio, esa ruta queda fuera del proyecto. Debería ser `admin/`.
-- `noticias.html` y los archivos `news.json`, `events.json`, `faqs.json` y `team.json` no tienen contenido.
-- El atajo `Alt + I` abre el botón de información, pero todavía no hace nada.
-- `robots.txt` bloquea a todos los buscadores (`Disallow: /`). Puede estar bien mientras el sitio está en desarrollo, pero hay que cambiarlo antes del lanzamiento, porque el plan incluye la indexación en la versión 0.95.
+La última versión, 0.50.0-alpha, añadió un nuevo modal de navegación rápida, gradientes aleatorios para las tarjetas (basados en ángulos y paletas de colores), y cambió estilos de elementos.
 
 ## Datos personales
 

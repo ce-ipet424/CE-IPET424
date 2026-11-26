@@ -45,6 +45,8 @@ export async function initComponents() {
         loadComponent("modal-terms-container", "components/_modal-terms.html"),
         loadComponent("modal-in-dev-container", "components/_modal-in-dev.html"),
         loadComponent("modal-whats-new-container", "components/_modal-whats-new.html"),
+        loadComponent("modal-quick-nav-container", "components/_modal-quick-nav.html"),
+        loadComponent("modal-pdf-reader-container", "components/_modal-pdf-reader.html"),
     ]);
     // Una vez inyectado el HTML del aside en el DOM:
     await getVillaDoloresWeather();
