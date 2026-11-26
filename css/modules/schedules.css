@@ -4,6 +4,7 @@
 .schedule-grid {
     display: grid;
     grid-template-columns: 95px repeat(5, 1fr);
+    min-height: 45vh;
     margin-bottom: var(--space-lg);
     padding: 1rem;
     overflow-x: auto;

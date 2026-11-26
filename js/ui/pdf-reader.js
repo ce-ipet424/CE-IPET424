@@ -1,5 +1,5 @@
 /* ==========================================
-    MODO LECTURA DE PDFS INTEGRADO (DEFINITIVO)
+    MODO LECTURA DE PDFS INTEGRADO
 ========================================== */
 export function initPdfReader() {
     const overlay = document.getElementById("pdf-modal-overlay");

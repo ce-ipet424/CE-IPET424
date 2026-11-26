@@ -23,6 +23,8 @@
 @import "components/cards.css";
 @import "components/accordion.css";
 @import "components/widgets.css";
+@import "components/pdf-reader.css";
+@import "components/quick-nav.css";
 
 /* ESTRUCTURA Y LAYOUT */
 @import "layout/header.css";

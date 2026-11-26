@@ -117,7 +117,7 @@
         font-weight: bold;
         font-size: var(--fs-base);
         cursor: var(--pointer);
-        transition: color var(--transition-fast);
+        transition: var(--transition-fast);
     }
     .header-nav-button:hover {
         color: var(--link-hover);
@@ -126,21 +126,16 @@
         font-size: var(--fs-base);
         opacity: 0.7;
     }
-    #dropdown-proyecto {
-        display: flex;
-        grid-row: 1 / span 2;
-        grid-column: 3;
-    }
-    #dropdown-proyecto > .header-nav-button {
-        justify-content: center;
-        width: 100%;
-    }
     /* Desplegables del menú */
     .header-dropdown {
         position: relative;
         padding: var(--space-xs);
         border-radius: var(--radius-sm);
-        background-color: rgba(129, 129, 129, 0.15);
+        background-color: var(--bg-widget);
+        transition: var(--transition-button);
+    }
+    .header-dropdown:hover {
+        background-color: var(--bg-widget-hover);
     }
     .dropdown-content {
         display: none;
@@ -165,7 +160,7 @@
         white-space: nowrap;
     }
     .dropdown-content a:hover {
-        background: var(--bg-hover, rgba(0, 0, 0, 0.05));
+        background: var(--bg-widget);
     }
     /* Cuadrícula 3x2 para los Iconos */
     .header-icons-grid {

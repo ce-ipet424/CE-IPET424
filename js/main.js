@@ -18,8 +18,10 @@ import { initTheme } from "./ui/theme.js";
 import { initModals } from "./ui/modals.js";
 import { initHeader } from "./ui/header.js";
 import { initPdfReader } from "./ui/pdf-reader.js";
+import { initQuickNav } from "./ui/quick-nav.js";
 import { initFontSize } from "./utils/font-size.js";
 import { initScrollAnimations } from "./utils/animations.js";
+import { initRandomGradients } from "./utils/gradients.js";
 import { initDyslexia, initAnimations } from "./utils/accessibility.js";
 import { initSound, playSound } from "./utils/sound.js";
 import { initShortcuts } from "./utils/shortcuts.js";
@@ -44,9 +46,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     initScrollAnimations();
     initDyslexia();
     initAnimations();
+    initRandomGradients();
     initSound();
     initShortcuts();
     initPdfReader();
+    initQuickNav();
     initExtras();
 });
 

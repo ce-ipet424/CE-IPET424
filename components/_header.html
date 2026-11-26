@@ -28,39 +28,46 @@
         <nav class="header-nav-grid" aria-label="Menú principal">
             <div class="header-dropdown">
                 <button class="header-nav-button">INICIO <span class="arrow">▾</span></button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" data-random-gradient>
                     <a href="index.html">Inicio</a>
                     <a href="noticias.html">Noticias</a>
                 </div>
             </div>
             <div class="header-dropdown">
-                <button class="header-nav-button">NOSOTROS <span class="arrow">▾</span></button>
-                <div class="dropdown-content">
-                    <a href="nosotros.html">Sobre Nosotros</a>
-                    <a href="proyectos.html">Nuestros Proyectos</a>
-                    <a href="contacto.html">Contacto</a>
-                </div>
-            </div>
-            <div class="header-dropdown" id="dropdown-proyecto">
-                <button class="header-nav-button" id="nav-item-proyecto">PROYECTO <span class="arrow">▾</span></button>
-                <div class="dropdown-content">
-                    <a href="proyecto-web.html">Sobre la Web</a>
-                    <a href="creditos.html">Créditos</a>
-                    <a href="aviso-legal.html">Aviso Legal</a>
-                </div>
-            </div>
-            <div class="header-dropdown">
                 <button class="header-nav-button">ESCUELA <span class="arrow">▾</span></button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" data-random-gradient>
                     <a href="escuela.html">Nuestra Escuela</a>
                     <a href="tramites.html">Trámites</a>
                 </div>
             </div>
             <div class="header-dropdown">
+                <button class="header-nav-button">NOSOTROS <span class="arrow">▾</span></button>
+                <div class="dropdown-content" data-random-gradient>
+                    <a href="nosotros.html">Sobre Nosotros</a>
+                    <a href="proyectos.html">Nuestros Proyectos</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </div>
+            <div class="header-dropdown">
                 <button class="header-nav-button">RECURSOS <span class="arrow">▾</span></button>
-                <div class="dropdown-content">
+                <div class="dropdown-content" data-random-gradient>
                     <a href="recursos.html">Recursos Útiles</a>
                     <a href="herramientas.html">Herramientas Estudiantiles</a>
+                </div>
+            </div>
+            <div class="header-dropdown">
+                <button class="header-nav-button">UTILIDADES <span class="arrow">▾</span></button>
+                <div class="dropdown-content" data-random-gradient>
+                    <a href="horarios.html">Horarios</a>
+                    <a href="calendario.html">Calendario</a>
+                </div>
+            </div>
+            <div class="header-dropdown" id="dropdown-proyecto">
+                <button class="header-nav-button">PROYECTO <span class="arrow">▾</span></button>
+                <div class="dropdown-content" data-random-gradient>
+                    <a href="proyecto-web.html">Sobre la Web</a>
+                    <a href="creditos.html">Créditos</a>
+                    <a href="aviso-legal.html">Aviso Legal</a>
                 </div>
             </div>
         </nav>
@@ -97,7 +104,7 @@
 <!-- Modal global del header -->
 <div id="header-modal" class="header-modal" aria-hidden="true">
     <div class="header-modal-overlay" id="modal-overlay"></div>
-    <div class="header-modal-card">
+    <div class="header-modal-card" data-random-gradient>
         <button id="modal-close-button" class="modal-close-button" aria-label="Cerrar">&times;</button>
         <h2 id="modal-title" class="modal-title"></h2>
         <div id="modal-body" class="modal-body"></div>

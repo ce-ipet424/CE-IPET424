@@ -4,6 +4,28 @@ Todos los cambios notables y parches de este proyecto son registrados en este ar
 
 ---
 
+## v0.50.0-alpha - Versión Principal Mayor (26/11/26)
+
+- Las tarjetas de que antes manejaban gradientes fijos ahora tienen gradientes aleatorios, con colores y angulos diferentes gracias a una nueva función
+    - `js/utils/gradients.js` maneja las paletas de degradé por tema y tiene funciones para randomizar y reiniciar los gradientes
+- Nuevo modal de navegación rápida para moverse entre subpáginas
+    - Se accede con Alt+Q y con las flechas se navega. Al soltar, se abre la subpágina
+- Nuevo botón de navegación en el header, llamado UTILIDADES desde el cual se accede a los módulos de herramientas
+- Se reordenaron los enlaces del Header
+- Ahora los Widget tienen un color más oscuro al hacer Hover
+- Se cambió el color de selection, y la opacidad del fondo en algunos temas de color
+- Ahora el color de Hover del botón del Aside es transparente
+- Ahora el contenedor de Horarios tiene una altura mínima para evitar que colapse el layout
+- Se cambió un poco el toast de Easter Egg
+- El modal de lectura de pdf ahora está en su propio componente html en lugar de en el footer
+- Los estilos del modal de lectura de pdf ahora están en su propio archivo `pdf-reader.css` en lugar de `modals.css`
+- Nuevos archivos `_modal-quick-nav`, `gradients.js`, `quick-nav.js` y `quick-nav.css`
+- Carpeta `assets/img/icons/quick-nav` para los iconos del modal de navegación
+- Ruta del favicon en `admin/index.html` arreglada (ahora se muestra)
+- Se eliminó alguna información innecesaria del README
+
+---
+
 ## v0.49.0-alpha - Versión Principal (24/11/26)
 
 - Nuevo modal del header: Información, para conocer atajos de teclado e info general
